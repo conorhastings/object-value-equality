@@ -77,11 +77,11 @@ function objectValueEquality(a, b, opts) {
   opts = opts || {};
   opts.keysToIgnore = opts.keysToIgnore || [];
   /* we can return early if number of keys is not equal */
-  if (Object.keys(a).length !== Object.keys(b).length) {
-    return false;
-  }
   var aValues = getObjectValues(a, opts.keysToIgnore);
   var bValues = getObjectValues(b, opts.keysToIgnore);
+  if (aValues.length !== bValues.length) {
+    return false;
+  }
   return equality(aValues, bValues, opts);
 }
 
