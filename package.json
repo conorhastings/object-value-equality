@@ -1,0 +1,16 @@
+{
+  "name": "object-value-equality",
+  "version": "1.0.0",
+  "description": "assert that the value of each key of an object has a corresponding value in another object that matches",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "value",
+    "deep-equal"
+  ],
+  "author": "Conor Hastings",
+  "license": "MIT"
+}
