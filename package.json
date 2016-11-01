@@ -1,6 +1,6 @@
 {
   "name": "object-value-equality",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "assert that the value of each key of an object has a corresponding value in another object that matches",
   "main": "index.js",
   "scripts": {
