@@ -44,7 +44,7 @@ function valueEquality(a, b, opts) {
   } else if (Array.isArray(a)) {
     return arrayEquality(a, b, opts);
   } else if (typeof a === 'object') {
-    return objectEquality(a, b, opts);
+    return objectValueEquality(a, b, opts);
   }
 }
 function equality(a, b, opts) {
@@ -60,17 +60,6 @@ function arrayEquality(a, b, opts) {
     return false;
   }
   return equality(a, b, opts);
-}
-
-function objectEquality(a, b, opts) {
-  var filteredObjectA = filterObject(a, opts.keysToIgnore);
-  var filteredObjectB = filterObject(b, opts.keysToIgnore);
-  if (Object.keys(filteredObjectA).length !== Object.keys(filteredObjectB).length) {
-    return false;
-  }
-  return Object.keys(filteredObjectA).every(function(key) {
-    return valueEquality(filteredObjectA[key], filteredObjectB[key], opts);
-  });
 }
 
 function objectValueEquality(a, b, opts) {
